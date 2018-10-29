@@ -1,0 +1,26 @@
+<% if user_signed_in? %>
+  <% if current_user.voted_for?(idea) %>
+    <%= link_to upvote_path(current_user.upvotes.where(idea: idea).first), remote: true, method: :delete, class: 'idea-upvote idea-upvoted' do %>
+      <div class="idea-arrow"></div>
+      <div class='idea-count'>
+        <%= idea.upvotes.size %>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to upvotes_path(idea_id: idea.id), remote: true, method: :post, class: 'idea-upvote' do %>
+<div class="idea-arrow"></div>
+
+      <div class='idea-count'>
+        <%= idea.upvotes.size %>
+      </div>
+    <% end %>
+  <% end %>
+
+<% else %>
+  <div class='idea-upvote'>
+<div class="idea-arrow"></div>
+    <div class='idea-count'>
+      <%= idea.upvotes.size %>
+    </div>
+  </div>
+<% end %>

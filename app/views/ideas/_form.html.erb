@@ -1,0 +1,7 @@
+<%= simple_form_for @idea do |f| %>
+	<%= f.input :name, placeholder: "Your idea name" %>
+	<%= f.input :content, placeholder: "Explain your idea" %>
+
+	<%= f.button :submit, "List your idea", class: "btn-treehouse" %>
+
+	<% end %>

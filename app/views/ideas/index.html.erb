@@ -1,0 +1,41 @@
+<div class="container">
+
+   
+    
+        
+    
+
+            	<div class="row no-gutters" >
+        	       <!--  <div class="col-md-4 col-lg-2 row-md-12 row-lg-12 row-sm-12">
+                	<p> Filter Section </p> 
+    	            </div>-->
+
+	                	<%  @ideas.each do |idea| %>
+					
+			<div class="idea" "col-sm-offset-1 col-sm-8 col-md-offset-2 col-md-6 col-lg-offset-2 col-lg-8">
+			  
+
+			  
+			  
+			  <div class='idea-body'>
+			    <h3><%= link_to idea.name, idea_path(idea) %></h3>
+			    <p> <%= idea.content %> </p>
+			    <h6 class="scred">by <span class="label label-default"><%= idea.user.email %> </span></h5>
+			   
+			  </div>
+			  <ul class="list-inline idea-controls hidden-sm hidden-xs">
+				<div class="upvote-container" id="idea-<%= idea.id %>">
+            		<%= render 'upvotes/show', idea: idea %>
+          		</div>			    
+			  </ul>
+			</div>
+		<% end %>
+
+                	</div>
+               	 <div class="col-md-4 col-lg-3">
+                	<!-- Posts sections -->
+                	</div>
+
+
+            	</div>
+        	</div>
