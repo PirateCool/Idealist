@@ -8,7 +8,7 @@ You cannot login !
 I generated this app using Le Wagon Template to jumpstart a project.
 It include postgresql, bootstrap, jquery, nokogiri, simple_form and a lot more.
 
-## You can check Idealist Heroku!!
+## You can check Idealist on Heroku!!
 https://idealist-thp.herokuapp.com/
 
 ### Call me for corrections 
